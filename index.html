@@ -51,20 +51,30 @@
       font-size: 0.9rem;
       color: #666;
     }
+    iframe {
+      width: 100%; /* Ensures the iframe is responsive */
+      max-width: 500px; /* Limits the width of the iframe */
+      height: 280px;
+      border: none;
+      overflow: hidden;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Cover and Profile Section -->
   <div class="cover">
     <img src="assets/HVM.jpg" alt="Profile" class="profile-pic">
   </div>
 
+  <!-- Page Info Section -->
   <div class="page-info">
     <h1>My Awesome Page</h1>
     <p>@awesomehandle</p>
     <p>This is my custom Facebook-like web page with videos, images, and text.</p>
   </div>
 
+  <!-- Navigation Bar -->
   <nav>
     <a href="#">Home</a>
     <a href="#">Photos</a>
@@ -72,21 +82,28 @@
     <a href="#">About</a>
   </nav>
 
+  <!-- Post Section -->
   <div class="post">
     <h2>Post Title</h2>
     <p>This is an example post that you can expand to hundreds or thousands of entries. You can also include Facebook video embeds or YouTube videos here.</p>
     <img src="assets/HVM.jpg" alt="Post Image">
   </div>
 
-  <!-- Embedded Facebook Reel -->
+  <!-- Embedded Facebook Reel (iframe for embedded video) -->
   <div class="post">
     <h2>Embedded Facebook Reel</h2>
-    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1218937046518725%2F%3Fapp%3Dfbl" 
-            width="500" height="280" style="border:none;overflow:hidden" 
-            scrolling="no" frameborder="0" allowfullscreen="true">
+    <!-- Updated iframe embed code -->
+    <iframe 
+      src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1218937046518725" 
+      style="border:none;overflow:hidden" 
+      scrolling="no" 
+      frameborder="0" 
+      allow="autoplay; fullscreen" 
+      allowfullscreen="true">
     </iframe>
   </div>
 
+  <!-- Footer Section -->
   <footer>
     &copy; 2025 My Facebook-Style Website
   </footer>
