@@ -1,227 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HVM LOFT</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1082414402590252"
-     crossorigin="anonymous"></script>
-</head>
-<style>
-/* Global Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    padding-bottom: 80px; /* Space for footer */
-}
-
-/* Header Styling */
-header {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-}
-
-h1 {
-    font-size: 2rem;
-}
-
-/* Image Gallery Section */
-#images {
-    margin: 20px;
-}
-
-#images h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-    justify-items: center;
-}
-
-.image-gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Video Gallery Section */
-#videos {
-    margin: 20px;
-}
-
-#videos h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.video-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    justify-items: center;
-}
-
-/* Ensuring iframe is responsive */
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-top: 56.25%; /* Default aspect ratio (16:9) */
-    background: #000;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Adjusting aspect ratio dynamically */
-.video-wrapper.landscape {
-    padding-top: 56.25%; /* 16:9 ratio for landscape */
-}
-
-.video-wrapper.portrait {
-    padding-top: 125%; /* 4:3 ratio for portrait (height is larger than width) */
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    object-fit: cover; /* Ensures video will cover the container */
-}
-
-/* Footer Styling */
-footer {
-    color: #333;
-    text-align: center;
-    padding: 1em;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.5rem;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HVM LOFT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1082414402590252"
+    crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .image-gallery {
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+      color: #333;
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+
+    header {
+      background: #00838f;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header::after {
+      content: "🕊️";
+      display: block;
+      font-size: 2rem;
+      margin-top: 0.5rem;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 30px 0 20px;
+      font-family: 'Playfair Display', serif;
+      color: #006064;
+    }
+
+    .image-gallery,
+    .video-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .image-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .fb-post {
+      width: 100%;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      background: #000;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    footer {
+      background: #e0f2f1;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 1rem;
+      position: relative;
+      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    footer p {
+      color: #00695c;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .image-gallery,
+      .video-gallery {
         grid-template-columns: 1fr 1fr;
+      }
     }
 
-    .video-gallery {
+    @media (max-width: 480px) {
+      .image-gallery,
+      .video-gallery {
         grid-template-columns: 1fr;
+      }
     }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.2rem;
-    }
-
-    .image-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .video-gallery {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
+  </style>
+</head>
 <body>
 
-    <header>
-        <h1>Welcome to HVM LOFT</h1>
-    </header>
+  <header>
+    <h1>Welcome to HVM LOFT</h1>
+  </header>
 
-    <section id="images">
-        <h2>Images</h2>
-        <div class="image-gallery">
-           <!-- 
-            <img src="assets/HVM.jpg" alt="Image 1">
-            <img src="assets/HVM.jpg" alt="Image 2">
-            <img src="assets/HVM.jpg" alt="Image 3">
-            -->
-        </div>
-    </section>
+  <section id="images">
+    <h2>Our Doves</h2>
+    <div class="image-gallery">
+      <div class="fb-post" data-href="https://www.facebook.com/100075836897954/posts/pfbid033ruTfAFiFbtH3BU1nL7jSDTujaiLa8YmohTTDQArLAqPn4ue5S8CRugYWxEbcKBZl" data-width="500"></div>
+      <img src="https://source.unsplash.com/601x401/?pigeon,dove" alt="Dove 2">
+      <img src="https://source.unsplash.com/602x402/?pigeon,dove" alt="Dove 3">
+    </div>
+  </section>
 
-    <section id="videos">
-      <h2>Videos</h2>
-      <div class="video-gallery">
-          <!-- Landscape Video 
-          <div class="video-wrapper landscape">
-              <iframe 
-                  src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1218937046518725" 
-                  frameborder="0" 
-                  allow="fullscreen" 
-                  allowfullscreen="true">
-              </iframe>
-          </div> -->
-
-          <!-- Portrait Video -->
-          <div class="video-wrapper portrait">
-              <iframe 
-                  src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1218937046518725" 
-                  frameborder="0" 
-                  allow="fullscreen" 
-                  allowfullscreen="true">
-              </iframe>
-          </div>
-          <div class="video-wrapper portrait">
-              <iframe 
-                  src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1654947618491491" 
-                  frameborder="0" 
-                  allow="fullscreen" 
-                  allowfullscreen="true">
-              </iframe>
-          </div>
-          <div class="video-wrapper portrait">
-              <iframe 
-                  src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/689247787135489" 
-                  frameborder="0" 
-                  allow="fullscreen" 
-                  allowfullscreen="true">
-              </iframe>
-          </div>
-          <div class="video-wrapper portrait">
-              <iframe 
-                  src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/24326693306919973" 
-                  frameborder="0" 
-                  allow="fullscreen" 
-                  allowfullscreen="true">
-              </iframe>
-          </div>
-          <div class="video-wrapper portrait">
-              <iframe 
-                  src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/707330658430917" 
-                  frameborder="0" 
-                  allow="fullscreen" 
-                  allowfullscreen="true">
-              </iframe>
-          </div>
+  <section id="videos">
+    <h2>Flight Moments</h2>
+    <div class="video-gallery">
+      <div class="video-wrapper">
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1218937046518725"
+          frameborder="0" allow="fullscreen" allowfullscreen></iframe>
       </div>
-    </section>
+      <div class="video-wrapper">
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1654947618491491"
+          frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+      </div>
+      <div class="video-wrapper">
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/689247787135489"
+          frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+      </div>
+      <div class="video-wrapper">
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/24326693306919973"
+          frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+      </div>
+      <div class="video-wrapper">
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/707330658430917"
+          frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 My Responsive Website</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 HVM Loft | All Rights Reserved</p>
+  </footer>
+
+  <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0">
+  </script>
 
 </body>
 </html>
