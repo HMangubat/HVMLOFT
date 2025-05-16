@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Facebook-Style Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e9ebee;
+    }
+    .cover {
+      background: url('assets/HVM.jpg') center/cover no-repeat;
+      height: 250px;
+      position: relative;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid white;
+      position: absolute;
+      bottom: -75px;
+      left: 2rem;
+    }
+    .page-info {
+      padding: 5rem 2rem 2rem;
+      background: white;
+    }
+    .page-info h1 {
+      margin: 0;
+    }
+    nav {
+      background: #fff;
+      border-top: 1px solid #ccc;
+      padding: 1rem 2rem;
+      display: flex;
+      gap: 2rem;
+    }
+    .post {
+      background: white;
+      margin: 1rem 2rem;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cover">
+    <img src="assets/HVM.jpg" alt="Profile" class="profile-pic">
+  </div>
+
+  <div class="page-info">
+    <h1>My Awesome Page</h1>
+    <p>@awesomehandle</p>
+    <p>This is my custom Facebook-like web page with videos, images, and text.</p>
+  </div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Photos</a>
+    <a href="#">Videos</a>
+    <a href="#">About</a>
+  </nav>
+
+  <div class="post">
+    <h2>Post Title</h2>
+    <p>This is an example post that you can expand to hundreds or thousands of entries. You can also include Facebook video embeds or YouTube videos here.</p>
+    <img src="assets/HVM.jpg" alt="Post Image">
+  </div>
+
+  <div class="post">
+    <h2>Embedded Facebook Reel</h2>
+    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffacebook.com%2FYourPage%2Fvideos%2F123456789" 
+            width="500" height="280" style="border:none;overflow:hidden" 
+            scrolling="no" frameborder="0" allowfullscreen="true">
+    </iframe>
+  </div>
+
+  <footer>
+    &copy; 2025 My Facebook-Style Website
+  </footer>
+
+</body>
+</html>
