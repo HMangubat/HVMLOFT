@@ -79,10 +79,11 @@ h1 {
     position: relative;
     width: 100%;
     height: 0;
-    padding-bottom: 56.25%; /* This maintains a 16:9 aspect ratio (height/width = 9/16) */
+    padding-bottom: 56.25%; /* Default to 16:9 aspect ratio */
     background: #000;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .video-wrapper iframe {
@@ -92,6 +93,7 @@ h1 {
     width: 100%;
     height: 100%;
     border: none;
+    object-fit: cover; /* Ensures video will cover the container and maintain aspect ratio */
 }
 
 /* Footer Styling */
@@ -150,6 +152,7 @@ footer {
     <section id="videos">
       <h2>Videos</h2>
       <div class="video-gallery">
+          <!-- Landscape or Portrait video will now adjust -->
           <div class="video-wrapper">
               <iframe 
                   src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1218937046518725" 
@@ -159,7 +162,7 @@ footer {
               </iframe>
           </div>
 
-          <!-- You can add more iframes below for additional Facebook videos -->
+          <!-- Another example -->
           <div class="video-wrapper">
               <iframe 
                   src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1218937046518725" 
