@@ -2,142 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Facebook-Style Layout</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>My Facebook-Style Website</title>
   <style>
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f2f5;
+      background-color: #e9ebee;
     }
     .cover {
       background: url('assets/HVM.jpg') center/cover no-repeat;
       height: 250px;
+      position: relative;
     }
     .profile-pic {
-      width: 120px;
-      height: 120px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       border: 4px solid white;
       position: absolute;
-      bottom: -60px;
-      left: 20px;
+      bottom: -75px;
+      left: 2rem;
     }
-    .navbar-brand {
-      font-size: 1.5rem;
+    .page-info {
+      padding: 5rem 2rem 2rem;
+      background: white;
     }
-    .sidebar {
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    .page-info h1 {
+      margin: 0;
+    }
+    nav {
+      background: #fff;
+      border-top: 1px solid #ccc;
+      padding: 1rem 2rem;
+      display: flex;
+      gap: 2rem;
     }
     .post {
-      background-color: white;
-      margin-bottom: 20px;
-      padding: 20px;
+      background: white;
+      margin: 1rem 2rem;
+      padding: 1rem;
       border-radius: 8px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
     footer {
       text-align: center;
-      padding: 10px;
-      background-color: #fff;
-      margin-top: 40px;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar (Top Bar) -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="#">Facebook</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Friends</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Messages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Notifications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Profile</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Cover and Profile Section -->
-  <div class="container mt-5">
-    <div class="cover position-relative">
-      <img src="assets/HVM.jpg" alt="Cover Image" class="w-100 h-100">
-      <img src="assets/HVM.jpg" alt="Profile Picture" class="profile-pic">
-    </div>
-
-    <div class="row mt-5">
-      <!-- Main Content (Feed) -->
-      <div class="col-md-8">
-        <!-- User Info Section -->
-        <div class="text-center bg-white p-4 rounded shadow-sm">
-          <h3>John Doe</h3>
-          <p>@john_doe</p>
-          <p>This is my custom Facebook-like page.</p>
-        </div>
-
-        <!-- Post 1 -->
-        <div class="post mt-4">
-          <h5>Post Title</h5>
-          <p>This is a sample post. You can write your text here and add photos or videos.</p>
-          <img src="assets/HVM.jpg" alt="Post Image" class="img-fluid">
-          <div class="mt-3">
-            <button class="btn btn-outline-primary btn-sm">Like</button>
-            <button class="btn btn-outline-secondary btn-sm">Comment</button>
-            <button class="btn btn-outline-success btn-sm">Share</button>
-          </div>
-        </div>
-
-        <!-- Post 2 (Video Embed) -->
-        <div class="post mt-4">
-          <h5>Embedded Video</h5>
-          <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffacebook.com%2FYourPage%2Fvideos%2F123456789" 
-                  width="100%" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true">
-          </iframe>
-        </div>
-      </div>
-
-      <!-- Sidebar -->
-      <div class="col-md-4">
-        <div class="sidebar">
-          <h5>Suggestions</h5>
-          <ul class="list-unstyled">
-            <li><a href="#">Friend 1</a></li>
-            <li><a href="#">Friend 2</a></li>
-            <li><a href="#">Friend 3</a></li>
-            <li><a href="#">Friend 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  <div class="cover">
+    <img src="assets/HVM.jpg" alt="Profile" class="profile-pic">
   </div>
 
-  <!-- Footer -->
+  <div class="page-info">
+    <h1>My Awesome Page</h1>
+    <p>@awesomehandle</p>
+    <p>This is my custom Facebook-like web page with videos, images, and text.</p>
+  </div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Photos</a>
+    <a href="#">Videos</a>
+    <a href="#">About</a>
+  </nav>
+
+  <div class="post">
+    <h2>Post Title</h2>
+    <p>This is an example post that you can expand to hundreds or thousands of entries. You can also include Facebook video embeds or YouTube videos here.</p>
+    <img src="assets/HVM.jpg" alt="Post Image">
+  </div>
+
+  <div class="post">
+    <h2>Embedded Facebook Reel</h2>
+    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffacebook.com%2FYourPage%2Fvideos%2F123456789" 
+            width="500" height="280" style="border:none;overflow:hidden" 
+            scrolling="no" frameborder="0" allowfullscreen="true">
+    </iframe>
+  </div>
+
   <footer>
-    <p>&copy; 2025 Facebook-Style Website</p>
+    &copy; 2025 My Facebook-Style Website
   </footer>
 
-  <!-- Bootstrap JS and Popper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
